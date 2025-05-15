@@ -6,6 +6,20 @@ from keras import models
 from PIL import Image
 import io
 import os
+import gdown
+
+# Google Drive file ID for your .h5 model
+file_id = "14SWnczT3aMRRpkdezk7uO0vDOEttT159"
+url = f"https://drive.google.com/uc?id={file_id}"
+output = "backend/anemia_classification_model.h5"
+
+# Download only if not already present
+if not os.path.exists(output):
+    print("Downloading anemia_classification_model.h5 from Google Drive...")
+    gdown.download(url, output, quiet=False)
+else:
+    pr
+
 
 # Initialize Flask app
 app = Flask(__name__, template_folder="frontend/templates", static_folder="frontend/static")
