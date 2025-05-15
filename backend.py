@@ -18,7 +18,8 @@ if not os.path.exists(output):
     print("Downloading anemia_classification_model.h5 from Google Drive...")
     gdown.download(url, output, quiet=False)
 else:
-    pr
+    print("Model file already exists. Skipping download.")
+
 
 
 # Initialize Flask app
